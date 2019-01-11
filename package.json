@@ -1,0 +1,11 @@
+{
+  "name": "fetch-google-material-themed-icons",
+  "version": "0.0.1",
+  "description": "Fetch certain set of themed Google Material Design icons",
+  "main": "fetch.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yisheng Cai",
+  "license": "MIT"
+}
