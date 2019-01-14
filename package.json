@@ -4,8 +4,14 @@
   "description": "Fetch certain set of themed Google Material Design icons",
   "main": "fetch.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "start": "node ./dist/fetch.js"
   },
   "author": "Yisheng Cai",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
