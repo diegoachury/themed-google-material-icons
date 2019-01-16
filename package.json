@@ -7,11 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "start": "node ./dist/fetch.js"
+    "start": "tsc && node ./dist/fetch.js"
   },
   "author": "Yisheng Cai",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "@types/download": "^6.2.4",
+    "@types/node": "^10.12.18",
+    "axios": "^0.18.0",
+    "download": "^7.1.0"
   }
 }
