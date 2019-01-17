@@ -1,10 +1,14 @@
 import axios from 'axios';
 import download from 'download';
-import { promises } from 'fs';
+import cheerio from 'cheerio';
 
 const fetchDom = async () => {
-  return axios.get('https://material.io/tools/icons/?style=round', { responseType: 'json' })
-    .then(console.log)
+  return axios.get('https://material.io/tools/icons/?style=round')
+    .then((response) => {
+      const $ = cheerio.load(response.data);
+      const result = $.find('.icon');
+      console.log(result);
+    })
     .catch(console.warn);
 };
 
@@ -29,4 +33,6 @@ const iterateNames = async () => {
   });
 }
 
-iterateNames();
+fetchDom();
+
+// iterateNames();
