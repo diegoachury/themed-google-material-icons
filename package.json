@@ -12,11 +12,8 @@
   "author": "Yisheng Cai",
   "license": "MIT",
   "dependencies": {
-    "@types/cheerio": "^0.22.10",
     "@types/download": "^6.2.4",
     "@types/node": "^10.12.18",
-    "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2",
     "download": "^7.1.0"
   }
 }
