@@ -17,7 +17,7 @@ const iterateNames = async () => {
     const destination = './icon-files';
 
     return new Promise((resolve, reject) => {
-      return download(url, destination, { filename: iconName })
+      return download(url, destination, { filename: `${iconName}.svg` })
         .then(() => { resolve(); })
         .catch((e) => {
           console.warn('Failed to download a specific icon.', e, 'Trying a different size for this');
