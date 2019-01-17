@@ -1,16 +1,7 @@
-import axios from 'axios';
 import download from 'download';
-import cheerio from 'cheerio';
 
-const fetchDom = async () => {
-  return axios.get('https://material.io/tools/icons/?style=round')
-    .then((response) => {
-      const $ = cheerio.load(response.data);
-      const result = $.find('.icon');
-      console.log(result);
-    })
-    .catch(console.warn);
-};
+const theme = 'round';
+const size = 24;
 
 const iterateNames = async () => {
   const fs = require('fs');
@@ -20,7 +11,7 @@ const iterateNames = async () => {
   console.log('Download start, please wait');
 
   Promise.all(result.map((iconName : string) => {
-    const url = `https://material.io/tools/icons/static/icons/round-${iconName}-24px.svg`;
+    const url = `https://material.io/tools/icons/static/icons/${theme}-${iconName}-${size}px.svg`;
     const destination = './icon-files';
 
     return new Promise((resolve, reject) => {
@@ -33,6 +24,4 @@ const iterateNames = async () => {
   });
 }
 
-fetchDom();
-
-// iterateNames();
+iterateNames();
